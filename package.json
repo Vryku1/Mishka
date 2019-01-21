@@ -1,0 +1,30 @@
+{
+  "name": "mishka",
+  "version": "1.0.0",
+  "description": "Project Mishka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vryku1/mishka.git"
+  },
+  "author": "Vryku1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vryku1/mishka/issues"
+  },
+  "homepage": "https://github.com/Vryku1/mishka#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
