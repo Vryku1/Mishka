@@ -1,0 +1,20 @@
+@mixin media-breakpoint-up($size) {
+	@if $size == 'md' {
+		@media (min-width: $md) {
+			@content;
+		}
+	} @else if $size == 'lg' {
+		@media (min-width: $lg) {
+			@content;
+		}
+	}
+}
+
+@mixin media-resolution-retina($file, $extension, $width, $height) {
+	background-image: url($file + '.' + $extension);
+
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+		background-image: url($file + '@2x' + '.' + $extension);
+		background-size: $width $height;
+	}
+}

@@ -1,0 +1,130 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+
+	background-color: rgba(255, 255, 255, 0.9);
+	visibility: hidden;
+	opacity: 0;
+
+	transition: all 0.3s;
+}
+
+.modal-overlay--opened {
+	visibility: visible;
+	opacity: 1;
+
+	transition:	opacity 0.3s;
+}
+
+.add-to-cart-modal {
+	position: fixed;
+	top: 37.2%;
+	left: 50%;
+
+	width: 320px;
+	padding: 30px 30px 46px;
+
+	background-color: $color-bg-primary;
+	box-shadow:
+		0 0 0 1px $color-silver,
+		0 5px 10px rgba(0, 1, 1, 0.25);
+	transform: translateX(-50%);
+
+	transition: top 0.3s;
+
+	@include media-breakpoint-up('md') {
+		top: 38%;
+
+		width: 566px;
+		padding: 33px 106px 46px;
+	}
+}
+
+.add-to-cart-modal--opened {
+	top: 32.2%;
+
+	transition: top 0.3s;
+
+	@include media-breakpoint-up('md') {
+		top: 33%;
+	}
+}
+
+.add-to-cart-modal__title {
+	margin: 0 49px 12px;
+
+	font-size: 25px;
+	line-height: 30px;
+	text-align: center;
+	color: $color-text-secondary;
+	text-transform: uppercase;
+
+	@include media-breakpoint-up('md') {
+		margin: 0 0 14px;
+
+		font-size: 30px;
+		line-height: 57px;
+	}
+}
+
+.add-to-cart-modal__descr {
+	margin: 0 0 23px;
+
+	font-size: 15px;
+	line-height: 30px;
+	text-align: center;
+
+	@include media-breakpoint-up('md') {
+		margin-bottom: 21px;
+
+		font-size: 17px;
+	}
+}
+
+.add-to-cart-modal__form {
+	@include media-breakpoint-up('md') {
+		padding: 0 3px 0 1px;
+	}
+}
+
+.add-to-cart-modal__wrapper {
+	display: flex;
+	margin-bottom: 31px;
+}
+
+.add-to-cart-modal__value-group {
+	flex-basis: 100%;
+
+	&:not(:last-child) {
+		margin-right: 7px;
+	}
+}
+
+.add-to-cart-modal__label {
+	display: block;
+	padding: 16px 0;
+
+	font-weight: 700;
+	line-height: 16px;
+	text-align: center;
+
+	border: 2px solid fade-out($color-border-secondary, 0.9);
+	cursor: pointer;
+}
+
+.add-to-cart-modal__input:hover + .add-to-cart-modal__label {
+	border-color: fade-out($color-border-secondary, 0.7);
+}
+
+.using-keyboard .add-to-cart-modal__input:focus + .add-to-cart-modal__label,
+.no-js .add-to-cart-modal__input:focus + .add-to-cart-modal__label {
+	border-color: fade-out($color-border-secondary, 0.7);
+}
+
+.add-to-cart-modal__input:checked + .add-to-cart-modal__label {
+	border-color: $color-accent-primary !important;
+}

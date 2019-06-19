@@ -1,0 +1,154 @@
+@font-face {
+	font-family: 'Open Sans';
+	src:
+		local('Open Sans Regular'), local('OpenSans-Regular'),
+		url('../fonts/OpenSansRegular.woff2') format('woff2'),
+		url('../fonts/OpenSansRegular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src:
+		local('Open Sans Bold'), local('OpenSans-Bold'),
+		url('../fonts/OpenSansBold.woff2') format('woff2'),
+		url('../fonts/OpenSansBold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+
+	line-height: 1.15;
+
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 24px;
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	color: $color-text-primary;
+
+	background-color: $color-bg-primary;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+
+	background-color: transparent;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+
+	vertical-align: middle;
+}
+
+:focus {
+	outline: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	border: none;
+
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
+
+.visually-hidden-up-md:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden-up-md,
+input[type="radio"].visually-hidden-up-md {
+	@include media-breakpoint-up('md') {
+		position: absolute;
+
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+
+		white-space: nowrap;
+
+		border: none;
+
+		clip: rect(0 0 0 0);
+		clip-path: inset(100%);
+	}
+}
+
+.display-up-md {
+	display: none !important;
+
+	@include media-breakpoint-up('md') {
+		display: block !important;
+	}
+}
+
+.display-down-md {
+	@include media-breakpoint-up('md') {
+		display: none !important;
+	}
+}
+
+.display-up-lg {
+	display: none !important;
+
+	@include media-breakpoint-up('lg') {
+		display: block !important;
+	}
+}
+
+.display-down-lg {
+	@include media-breakpoint-up('lg') {
+		display: none !important;
+	}
+}
+
+.icon-link[href] {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}

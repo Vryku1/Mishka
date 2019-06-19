@@ -1,0 +1,234 @@
+.btn {
+	display: inline-block;
+	width: 100%;
+
+	font-weight: 700;
+
+	background-color: transparent;
+	border: none;
+}
+
+.btn--primary {
+	padding: 14px 38px;
+
+	line-height: 20px;
+	color: $color-text-primary;
+	text-align: center;
+	text-transform: uppercase;
+
+	border: 2px solid $color-border-secondary;
+
+	&:hover {
+		color: $color-white;
+
+		background-color: $color-charcoal;
+		cursor: pointer;
+	}
+
+	&:active:hover {
+		color: fade-out($color-white, 0.7);
+	}
+}
+
+.using-keyboard .btn--primary,
+.no-js .btn--primary {
+	&:focus {
+		color: $color-white;
+
+		background-color: $color-charcoal;
+	}
+
+	&:active {
+		color: fade-out($color-white, 0.7);
+	}
+}
+
+.btn--primary-reviews {
+	letter-spacing: 0.6px;
+
+	@include media-breakpoint-up('md') {
+		width: auto;
+
+		letter-spacing: 0;
+	}
+}
+
+.btn--primary-contacts {
+	display: block;
+	width: auto;
+
+	letter-spacing: 0.7px;
+
+	@include media-breakpoint-up('md') {
+		letter-spacing: 0;
+	}
+}
+
+.btn--primary-production {
+	padding: 14px 23px;
+
+	letter-spacing: 0.1px;
+}
+
+.btn--primary-order-form {
+	@include media-breakpoint-up('md') {
+		width: auto;
+		padding: 14px 30px;
+	}
+}
+
+.btn--secondary {
+	position: relative;
+
+	padding: 25px 30px 30px;
+
+	font-size: 19px;
+	color: $color-white;
+
+	background-color: $color-accent-primary;
+
+	&:hover {
+		background-color: $color-medium-turquoise;
+		cursor: pointer;
+	}
+
+	&:active:hover {
+		color: fade-out($color-white, 0.7);
+	}
+
+	@include media-breakpoint-up('md') {
+		padding: 28px 36px 42px;
+
+		font-size: 20px;
+		line-height: 30px;
+
+		transition: transform 0.3s;
+	}
+}
+
+.using-keyboard .btn--secondary,
+.no-js .btn--secondary {
+	&:focus {
+		background-color: $color-medium-turquoise;
+	}
+
+	&:active {
+		color: fade-out($color-white, 0.7);
+	}
+}
+
+.btn--secondary-interior-items,
+.btn--secondary-kids-toys {
+	&::after {
+		content: '';
+		position: absolute;
+
+		opacity: 0.5;
+	}
+
+	&:hover {
+		&::after {
+			opacity: 0.7;
+		}
+	}
+
+	&:active:hover {
+		&::after {
+			opacity: 0.3;
+		}
+	}
+
+	@include media-breakpoint-up('md') {
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: translateY(-5px);
+
+			transition: transform 0.3s;
+		}
+	}
+}
+
+.btn--secondary-interior-items {
+	&::after {
+		top: 23px;
+		right: 36px;
+
+		width: 40px;
+		height: 62px;
+
+		background-image: url('../img/interior-items.svg');
+	}
+
+	@include media-breakpoint-up('md') {
+		&::after {
+			top: 30px;
+			right: 37px;
+		}
+	}
+}
+
+.btn--secondary-kids-toys {
+	background-color: $color-puerto-rico;
+
+	&::after {
+		top: 21px;
+		right: 27px;
+
+		width: 60px;
+		height: 60px;
+
+		background-image: url('../img/kids-toys.svg');
+	}
+
+	&:hover {
+		background-color: $color-accent-tertiary;
+	}
+
+	@include media-breakpoint-up('md') {
+		&::after {
+			top: 31px;
+			right: 34px;
+		}
+	}
+}
+
+.using-keyboard .btn--secondary-interior-items,
+.no-js .btn--secondary-interior-items,
+.using-keyboard .btn--secondary-kids-toys,
+.no-js .btn--secondary-kids-toys {
+	&:focus {
+		&::after {
+			opacity: 0.7;
+		}
+	}
+
+	&:active {
+		&::after {
+			opacity: 0.3;
+		}
+	}
+
+	@include media-breakpoint-up('md') {
+		&:focus {
+			transform: translateY(-5px);
+
+			transition: transform 0.3s;
+		}
+	}
+}
+
+.using-keyboard .btn--secondary-kids-toys,
+.no-js .btn--secondary-kids-toys {
+	&:focus {
+		background-color: $color-accent-tertiary;
+	}
+}
+
+.btn--secondary-add-to-cart-modal {
+	padding: 18px 25px;
+
+	font-size: 17px;
+	line-height: 16px;
+	text-transform: uppercase;
+}

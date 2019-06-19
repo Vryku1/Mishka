@@ -1,0 +1,24 @@
+@import
+	'global/variables.scss',
+	'global/mixins.scss',
+	'global/normalize.scss',
+	'global/scaffolding.scss',
+	'global/pixel-perfect.scss';
+
+@import
+	'blocks/about-us/about-us.scss',
+	'blocks/add-to-cart-modal/add-to-cart-modal.scss',
+	'blocks/btn/btn.scss',
+	'blocks/catalog/catalog.scss',
+	'blocks/contacts/contacts.scss',
+	'blocks/featured/featured.scss',
+	'blocks/hero/hero.scss',
+	'blocks/main-nav/main-nav.scss',
+	'blocks/order-form/order-form.scss',
+	'blocks/page-footer/page-footer.scss',
+	'blocks/page-header/page-header.scss',
+	'blocks/page-main/page-main.scss',
+	'blocks/product/product.scss',
+	'blocks/production/production.scss',
+	'blocks/reviews/reviews.scss',
+	'blocks/socials/socials.scss';

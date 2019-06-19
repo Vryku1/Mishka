@@ -1,0 +1,131 @@
+.hero {
+	background-color: $color-white-smoke;
+
+	@include media-breakpoint-up('md') {
+		position: relative;
+
+		margin-top: -42px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			width: 100%;
+			height: 23px;
+			padding-top: 2.56%;
+
+			background-image: url('../img/zigzag-divider-lg-desktop.svg');
+			background-size: cover;
+		}
+	}
+
+	@include media-breakpoint-up('lg') {
+		&::after {
+			height: 29px;
+			padding-top: 0;
+
+			background-position-x: 50%;
+			background-size: 1250px 37px;
+		}
+	}
+}
+
+.catalog-page .hero,
+.order-page .hero {
+	padding: 71px 0 76px;
+
+	background-color: $color-bg-secondary;
+
+	@include media-breakpoint-up('md') {
+		padding: 96px 0 91px;
+	}
+
+	@include media-breakpoint-up('lg') {
+		padding: 94px 0 116px;
+
+		&::after {
+			background-size: 1150px 34px;
+		}
+	}
+}
+
+.hero__inner {
+	padding-top: 71px;
+
+	@include media-resolution-retina('../img/hero-mobile', 'jpg', 320px, auto);
+	background-repeat: no-repeat;
+	background-position: 50% -17px;
+
+	@include media-breakpoint-up('md') {
+		padding: 154px 50px 0;
+
+		@include media-resolution-retina('../img/hero-desktop', 'jpg', 768px, auto);
+		background-position-y: 0;
+	}
+
+	@include media-breakpoint-up('lg') {
+		max-width: 1150px;
+		margin: 0 auto;
+	}
+}
+
+.catalog-page .hero__inner,
+.order-page .hero__inner {
+	padding: 0 30px;
+
+	background-image: none;
+
+	@include media-breakpoint-up('md') {
+		padding: 0 50px;
+	}
+}
+
+.hero__title {
+	margin: 0 30px 122px;
+
+	font-size: 27px;
+	line-height: 30px;
+	text-align: center;
+	color: $color-text-secondary;
+
+	@include media-breakpoint-up('md') {
+		margin: 0 0 373px;
+
+		font-size: 43px;
+		line-height: 50px;
+	}
+
+	@include media-breakpoint-up('lg') {
+		margin-bottom: 359px;
+
+		font-size: 53px;
+		line-height: 57px;
+	}
+}
+
+.catalog-page .hero__title,
+.order-page .hero__title {
+	margin: 0 0 0 -3px;
+
+	@include media-breakpoint-up('md') {
+		margin-left: 0;
+	}
+
+	@include media-breakpoint-up('lg') {
+		letter-spacing: -0.2px;
+	}
+}
+
+.hero__list {
+	@include media-breakpoint-up('md') {
+		display: flex;
+	}
+}
+
+.hero__item {
+	@include media-breakpoint-up('md') {
+		flex: 1;
+	}
+}

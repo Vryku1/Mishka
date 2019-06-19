@@ -1,0 +1,39 @@
+.catalog {
+	margin-bottom: 31px;
+
+	@include media-breakpoint-up('md') {
+		margin-bottom: 53px;
+	}
+
+	@include media-breakpoint-up('lg') {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 57px;
+	}
+}
+
+.catalog__item {
+	&:not(:first-child) {
+		margin-top: 30px;
+	}
+
+	@include media-breakpoint-up('md') {
+		&:not(:first-child) {
+			margin-top: 54px;
+		}
+	}
+
+	@include media-breakpoint-up('lg') {
+		display: flex;
+		margin: 25px 51px 0 0;
+
+		&:nth-child(-n+3) {
+			margin-top: 0;
+		}
+
+		&:nth-child(3n),
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
